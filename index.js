@@ -7,9 +7,9 @@ const SECRET_KEY = "sk_test_51L8XfnFsR5opKmH1TEztjIzkolx956A9xpPGNmbCMQVVqQOdZLL
 import Stripe from 'stripe';
 const stripe = Stripe(SECRET_KEY, {apiVersion : '2020-08-27'});
 
-app.listen(port, ()=>{
-    console.log(`App listening at http://localhost:${port}`);
-});
+app.listen(5000, function(){
+    console.log('listening on *:5000');
+  });
 app.post('/create-payment-intent', async (req, res)=>{
     try {
         const paymentIntent = await stripe.paymentIntents.create({
