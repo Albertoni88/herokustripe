@@ -23,7 +23,7 @@ app.post('/create-payment-intent', async (req, res)=>{
             clientSecret : clientSecret
         })
     } catch (error) {
-        console.log("error ", error);
+        console.log("console error ", error);
         res.json({ error : error.message })
     }
 })
